@@ -23,6 +23,7 @@ For further reading and documentation on setting up Budibase on Azure or SSL/TLS
 
 ## Create Budibase Custom Image
 Setting up your custom image with a modified internal proxy port (Nginx) is a straightforward process when working with the [Dockerfile](Dockerfile).
+In this Dockerfile, we use `sed` to change the default port from 80 to 10000.
 ```Dockerfile
 FROM budibase/budibase-aas:latest
 
