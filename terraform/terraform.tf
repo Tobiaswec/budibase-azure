@@ -33,7 +33,7 @@ resource "azurerm_resource_group" "rg" {
 
 // -------------- TERRAFORM KEY VAULT --------------
 data "azurerm_client_config" "current" {}
-resource "azurerm_key_vault" "key-vault" {
+resource "azurerm_key_vault" "company-key-vault" {
   name                        = "company-keys-${terraform.workspace}"
   location                    = azurerm_resource_group.rg.location
   resource_group_name         = azurerm_resource_group.rg.name
